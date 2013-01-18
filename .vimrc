@@ -12,8 +12,8 @@ set smartindent
 set tabstop=4        " tab width is 4 spaces
 set shiftwidth=4     " indent also with 4 spaces
 set expandtab        " expand tabs to spaces
-" wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
-set textwidth=120
+" I want to be in control of wrapping!
+set textwidth=0
 " turn syntax highlighting on
 set t_Co=256
 syntax on
@@ -74,5 +74,6 @@ endif
 " NERD Tree
 autocmd vimenter * NERDTree
 map <C-n> :NERDTree<CR>
+nmap <silent> <C-D> :NERDTreeToggle<CR>
 autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
