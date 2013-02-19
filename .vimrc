@@ -1,9 +1,27 @@
-" set UTF-8 encoding
+" disable vi compatibility (emulation of old bugs)
+set nocompatible
+filetype off
+
+
+" Setup vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" Setup bundles
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'pangloss/vim-javascript'
+Bundle 'joestelmach/lint.vim'
+
+Bundle 'DoxygenToolkit.vim'
+
+filetype plugin indent on
+
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
-" disable vi compatibility (emulation of old bugs)
-set nocompatible
 " use indentation of previous line
 set autoindent
 " use intelligent indentation for C
