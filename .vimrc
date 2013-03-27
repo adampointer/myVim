@@ -39,7 +39,9 @@ set t_Co=256
 syntax on
 colorscheme wombat256
 " turn line numbers on
-set number
+set relativenumber
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
 " highlight matching braces
 set showmatch
 " intelligent comments
@@ -108,9 +110,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " GVIM specific configs
 if has("gui_running")
-    " Because I like normal copy paste commands in GVIM
-    nmap <C-V> "+gP
-    imap <C-V> <ESC><C-V>i
-    vmap <C-C> "+y
     colorscheme twilight
 endif
+
+let jshint_options_file = '~/.vim/options.js'
