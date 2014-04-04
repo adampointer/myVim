@@ -16,6 +16,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'joestelmach/lint.vim'
 
 Bundle 'DoxygenToolkit.vim'
+Bundle 'scratch.vim'
 
 filetype plugin indent on
 
@@ -110,7 +111,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 " GVIM specific configs
 if has("gui_running")
-    colorscheme twilight
+    colorscheme slate 
 endif
 
 let jshint_options_file = '~/.vim/options.js'
