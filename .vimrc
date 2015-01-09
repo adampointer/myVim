@@ -14,12 +14,14 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'pangloss/vim-javascript'
 Bundle 'joestelmach/lint.vim'
+Bundle 'jimenezrick/vimerl'
 
 Bundle 'DoxygenToolkit.vim'
 Bundle 'scratch.vim'
 
 filetype plugin indent on
 
+set mouse=a
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
@@ -131,3 +133,5 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
 let jshint_options_file = '~/.vim/options.js'
+let erlang_show_errors = 1
+let erlang_highlight_bif = 1
