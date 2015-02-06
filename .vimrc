@@ -33,6 +33,8 @@ set smartindent
 set tabstop=4        " tab width is 4 spaces
 set shiftwidth=4     " indent also with 4 spaces
 set expandtab        " expand tabs to spaces
+" Except for ruby
+autocmd FileType rb setlocal shiftwidth=2 tabstop=2
 " I want to be in control of wrapping!
 set textwidth=0
 " Git branch in statusline
